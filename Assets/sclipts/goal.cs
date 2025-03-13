@@ -4,18 +4,9 @@ using UnityEngine;
 
 public class goal : MonoBehaviour
 {
+    public GameObject clreinfoobjerct;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("스테이지를 클리어했습니다.");
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        Debug.Log("충돌 지점에서 벗어났습니다.");
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        Debug.Log("충돌 진행중입니다.");
+        clreinfoobjerct.SetActive(true);
     }
 }

@@ -748,6 +748,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6271379204199451936, guid: 54617abcc03b6d24a8d1900f0148000c, type: 3}
+      propertyPath: unActivateBoxSpriteRendrer
+      value: 
+      objectReference: {fileID: -927698520, guid: dab0f50b1367b924d93a0cb5123fb5a7, type: 3}
     - target: {fileID: 6305168603890903881, guid: 54617abcc03b6d24a8d1900f0148000c, type: 3}
       propertyPath: m_Name
       value: randon box
