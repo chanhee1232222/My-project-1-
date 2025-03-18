@@ -29,6 +29,8 @@ public class randombox : MonoBehaviour
 
 
             _sr.sprite = unActivateBoxSpriteRendrer;
+
+            soundmanager.Instance.PlaySFX("coin");
         }
     }
 

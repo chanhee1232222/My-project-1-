@@ -5,8 +5,10 @@ using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour
 {
     public float moveSpeed = 2.5f;
-    public Transform platerStartPosition;
+    public Transform playerStartPosition;
     private Rigidbody2D rigid;
+
+    Animator animator;
 
     ParticleSystem dust;
 
@@ -18,7 +20,8 @@ public class NewBehaviourScript : MonoBehaviour
 
     void Start()
     {
-        transform.position = platerStartPosition.position;
+        transform.position = playerStartPosition.position;
+        animator = GetComponent<Animator>();
     }
     void Update()
     {
@@ -26,10 +29,12 @@ public class NewBehaviourScript : MonoBehaviour
 
         rigid.velocity = new Vector2(moveInput_X * moveSpeed, rigid.velocity.y);
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
+            animator.SetTrigger("jump");
+            soundmanager.Instance.PlaySFX("jump");
             CreateDust();
-            rigid.velocity = new Vector2(rigid.velocity.x, 10);
+            rigid.velocity = new Vector2(rigid.velocity.x, 30);
         }
     }
 
